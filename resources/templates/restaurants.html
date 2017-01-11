@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants</title>
+</head>
+<body>
+<h1>Restaurants!</h1>
+<ul>
+{{#restaurants}}
+    <li>{{name}}</li>
+    <li>{{price}}</li>
+    <li>{{rating}}</li>
+
+    Click To Edit:
+    <a href="/restaurants/{{id}}">Edit</a>
+{{/restaurants}}
+</ul>
+
+
+<form method="post" action="/create-restaurant">
+    Id:
+    <input type="text" name="id" />
+
+    Name:
+    <input type="text" name="name" />
+
+    Price:
+    <input type="text" name="price" />
+
+    Rating:
+    <input type="text" name="rating" />
+
+    <input type="submit" />
+</form>
+</body>
+</html>

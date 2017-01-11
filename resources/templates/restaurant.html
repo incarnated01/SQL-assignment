@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant</title>
+</head>
+<body>
+
+<ul>
+    {{#restaurant}}
+        <li>{{name}}</li>
+        <li>{{price}}</li>
+        <li>{{rating}}</li>
+    {{/restaurant}}
+</ul>
+
+
+<form method="post" action="/create-restaurant">
+    Id:
+    <input type="text" name="id" />
+
+    Name:
+    <input type="text" name="name" />
+
+    Price:
+    <input type="text" name="price" />
+
+    Rating:
+    <input type="text" name="rating" />
+
+    <input type="submit" />
+</form>
+</body>
+</html>
